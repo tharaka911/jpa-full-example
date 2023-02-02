@@ -8,7 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class CourseMaterialRepositoryTest {
 
@@ -20,12 +19,12 @@ class CourseMaterialRepositoryTest {
 
 
         Course course =Course.builder()
-                .credit(6)
-                .title("AWS fundamentals")
+                .credit(3)
+                .title("Maths")
                 .build();
 
         CourseMaterial courseMaterial = CourseMaterial.builder()
-                .url("www.google.com")
+                .url("www.maths.com")
                 .course(course)
                 .build();
 

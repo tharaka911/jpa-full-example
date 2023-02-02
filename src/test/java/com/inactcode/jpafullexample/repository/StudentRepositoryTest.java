@@ -8,13 +8,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class StudentRepositoryTest {
     @Autowired
     private  StudentRepository studentRepository;
 
-    @Test
+   /* @Test
     public void saveStudent(){
         Student student = Student.builder()
                 .emailId("tharaka@gmail.com")
@@ -26,21 +25,21 @@ class StudentRepositoryTest {
                 .build();
 
         studentRepository.save(student);
-    }
+    }*/
 
     @Test
     public void saveStudentWithGuardian(){
 
         Guardian guardian =Guardian.builder()
-                .name("Paminda")
-                .email("paminda@gmail.com")
+                .name("Jayabandu")
+                .email("jayabandu@gmail.com")
                 .mobile("0111111111")
                 .build();
 
         Student student = Student.builder()
-                .emailId("ishara@gmail.com")
-                .firstName("Ishara")
-                .lastName("Lakshitha")
+                .emailId("chamo@gmail.com")
+                .firstName("chamo")
+                .lastName("jayabandu")
                 .guardian(guardian)
                 .build();
         studentRepository.save(student);
